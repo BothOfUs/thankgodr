@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:orientation="vertical"
+          android:id="@+id/dateHolder"
+          android:layout_height="match_parent">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="20sp"
+              android:id="@+id/month"
+              android:text="May"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="20sp"
+              android:id="@+id/day"
+              android:text="15"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="20sp"
+              android:id="@+id/year"
+              android:text="2021"/>
+      </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/detailsHolder"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="20dp"
+           android:layout_toRightOf="@+id/dateHolder"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/orderNumber"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Order No 12346" />
+
+           <TextView
+               android:id="@+id/totalProductsCount"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="5 Products" />
+
+           <TextView
+               android:id="@+id/shipingCarrier"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="DHl" />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/totalHolder"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="29dp"
+           android:layout_toRightOf="@+id/detailsHolder"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/total"
+               android:textSize="@dimen/textTitle"
+               android:textStyle="bold" />
+
+           <TextView
+               android:id="@+id/total"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="$200.00" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/ststusHolder"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="25dp"
+           android:layout_toRightOf="@+id/totalHolder"
+           android:orientation="vertical">
+
+           <TextView
+               android:id="@+id/status"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Processing" />
+
+           <Button
+               android:id="@+id/reorder"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/orderAgain"/>
+
+       </LinearLayout>
+
+   </RelativeLayout>
+</androidx.cardview.widget.CardView>
