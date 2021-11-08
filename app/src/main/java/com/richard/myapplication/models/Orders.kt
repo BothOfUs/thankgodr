@@ -3,7 +3,10 @@ package com.richard.myapplication.models
 import java.util.*
 import kotlin.collections.ArrayList
 
-data class Orders(var orderId: UUID, val date: Date, var progucts : ArrayList<Product>){
+data class Orders(var orderId: UUID,
+                  val date: Date,
+                  var status : OrderStatus,
+                  var  shiipingCarrier : String, var progucts : ArrayList<Product>){
 
     fun getTotal(): Double{
         var totalprice = 0.0

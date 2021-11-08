@@ -5,4 +5,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="total">Total</string>
     <string name="orderAgain">Re-Order</string>
+    <string name="products">products</string>
 </resources>
