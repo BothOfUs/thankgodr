@@ -1,12 +1,15 @@
 package com.richard.myapplication.models
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import java.util.*
 import kotlin.collections.ArrayList
 
+@Parcelize
 data class Orders(var orderId: UUID,
                   val date: Date,
                   var status : OrderStatus,
-                  var  shiipingCarrier : String, var progucts : ArrayList<Product>){
+                  var  shiipingCarrier : String, var progucts : ArrayList<Product>) : Parcelable {
 
     fun getTotal(): Double{
         var totalprice = 0.0

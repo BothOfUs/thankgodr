@@ -8,7 +8,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 object OrderDataSource {
-    private lateinit var dataSet : ArrayList<Orders>
+    private  var dataSet : ArrayList<Orders> = ArrayList()
 
 
     init {
@@ -30,15 +30,15 @@ object OrderDataSource {
         products.add(Product("Trousers", 300.00,"trousers", "398374"))
         products.add(Product("Boxers", 24.00,"Information", "4645363"))
         products.add(Product("Skirt", 34.34,"365eggd", "272373"))
-        dataSet.add(Orders(UUID.fromString("Oder 1"), Date(),OrderStatus.PROCESSING,
+        dataSet.add(Orders(UUID.randomUUID(), Date(),OrderStatus.PROCESSING,
         "DHL",products))
-        dataSet.add(Orders(UUID.fromString("Oder 5"), Date(),OrderStatus.PROCESSING,
+        dataSet.add(Orders(UUID.randomUUID(), Date(),OrderStatus.CANCELED,
             "DHL",products))
-        dataSet.add(Orders(UUID.fromString("Oder 4"), Date(),OrderStatus.PROCESSING,
+        dataSet.add(Orders(UUID.randomUUID(), Date(),OrderStatus.AWAITING_PAYMENT,
             "DHL",products))
-        dataSet.add(Orders(UUID.fromString("Oder 3"), Date(),OrderStatus.PROCESSING,
+        dataSet.add(Orders(UUID.randomUUID(), Date(),OrderStatus.ON_HOLD,
             "DHL",products))
-        dataSet.add(Orders(UUID.fromString("Oder 11"), Date(),OrderStatus.PROCESSING,
+        dataSet.add(Orders(UUID.randomUUID(), Date(),OrderStatus.SHIPPING,
             "DHL",products))
     }
 }

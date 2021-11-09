@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/five"
+    android:id="@+id/order"
+    android:elevation="@dimen/five"
+    android:layout_margin="@dimen/five"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
    <RelativeLayout
        android:layout_width="wrap_content"
@@ -84,27 +89,26 @@
 
        </LinearLayout>
 
-       <LinearLayout
-           android:id="@+id/ststusHolder"
+
+
+
+       <Button
+           android:id="@+id/reorder"
            android:layout_width="wrap_content"
-           android:layout_height="match_parent"
+           android:textSize="10sp"
+           android:layout_height="wrap_content"
+           android:text="@string/orderAgain"/>
+
+
+       <TextView
+           android:id="@+id/status"
+           android:textSize="@dimen/smallNormalText"
+           android:layout_centerVertical="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
            android:layout_marginLeft="25dp"
            android:layout_toRightOf="@+id/totalHolder"
-           android:orientation="vertical">
-
-           <TextView
-               android:id="@+id/status"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Processing" />
-
-           <Button
-               android:id="@+id/reorder"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/orderAgain"/>
-
-       </LinearLayout>
+           android:text="Processing" />
 
    </RelativeLayout>
 </androidx.cardview.widget.CardView>

@@ -14,12 +14,12 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.richard.myapplication.ui.Orders.OrdersListFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_oders"
         tools:layout="@layout/list_order_fragment" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.richard.myapplication.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.richard.myapplication.ui.oderdetails.OderDeatilsFragment"
+        android:label="@string/OrderDetails"
+        tools:layout="@layout/fragment_orders_details" />
 </navigation>

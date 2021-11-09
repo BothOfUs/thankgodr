@@ -1,5 +1,7 @@
 package com.richard.myapplication.ui.Orders
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +27,9 @@ class OrdersListFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+
+
+        container?.removeAllViews()
         orderListViewModel =
                 ViewModelProvider(this).get(OrderListViewModel::class.java)
         orderListViewModel.init()
@@ -45,11 +50,21 @@ class OrdersListFragment : Fragment() {
         recyclerView = root.findViewById<RecyclerView>(R.id.listOrderRecycler)
         adapter = context?.let { orderListViewModel.getOrders().value?.let { it1 ->
             OrderListAdapter(
-                it1, it)
+                it1, it as Activity
+            )
         } }!!
         val layoutManger = LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
         recyclerView.layoutManager = layoutManger
-        recyclerView.adapter = adapter
+        if(recyclerView.adapter == null){
+            recyclerView.adapter = adapter
+        }
 
+    }
+
+
+    override fun onPause() {
+        super.onPause()
+        adapter.mDada.clear();
+        adapter.notifyDataSetChanged()
     }
 }

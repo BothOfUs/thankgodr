@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/five"
+    app:cardCornerRadius="@dimen/five"
+    android:layout_margin="@dimen/five"
+    android:padding="@dimen/five"
+    android:layout_height="wrap_content">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <ImageView
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_marginRight="@dimen/five"
+           android:scaleType="fitXY"
+           android:src="@android:color/black"
+           android:id="@+id/productImage"/>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/productImage"
+           android:id="@+id/productName"
+           android:textSize="@dimen/normalText"
+           android:text="Shirt Lomg" />
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="$2000"
+           android:textSize="@dimen/normalText"
+           android:layout_toRightOf="@id/productImage"
+           android:layout_below="@+id/productName"
+           android:id="@+id/price"/>
+
+
+
+
+   </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
